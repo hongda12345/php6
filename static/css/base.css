@@ -1,0 +1,26 @@
+/*
+* @Author: 宏达
+* @Date:   2017-08-24 12:40:29
+* @Last Modified by:   宏达
+* @Last Modified time: 2017-10-02 14:41:19
+*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: FreeSans,Arimo,"微軟正黑體","Droid Sans",Arial,Helvetica,sans-serif,"Microsoft JhengHei";
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+img{
+	vertical-align: middle;
+}
+body{
+	background: #ffffff;
+}
+body,html{
+	font-size: 16px;
+}

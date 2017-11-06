@@ -1,0 +1,188 @@
+<link rel="stylesheet" href="../static/css/gallery.css">
+<!-- portfolio -->
+    <section>
+    	<div class="gallery">           
+    		<div class="container">   
+            <div class="mask"><img src="<?php echo $list[$i]['thumb'];?>" alt="">
+                   <div class="close"></div>
+                   <div class="btnL iconfont icon-fanye-xiangzuo"></div>
+                   <div class="btnR iconfont icon-fanye-xiangyou"></div>
+            </div>           
+    			<div class="heading">
+    				<h2 class="head">Gallery</h2>
+    			</div>
+    			<div class="gallery-grids">
+                    <?php
+                        for($i=0;$i<9;$i++){
+                    ?>
+    				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 gallery-grid">
+    					<div class="gallery-grid1">
+                            <div class="team-grid">
+                                <img src="<?php echo $list[$i]['thumb'];?>" alt=""> 
+                                <div class="port-head">
+                                    <h3>Prefab</h3>
+                                </div>
+                                <div class="zhezhao"></div> 
+                            </div>
+    					</div>
+                       <!--  <div class="gallery-grid1">
+                            <div class="team-grid">
+                                <div class="port-head">
+                                    <h3>Prefab</h3>
+                                </div>
+                                <img src="<?php echo $list[$i]['thumb'];?>" alt=""> 
+                                <div class="zhezhao"></div> 
+                            </div>
+                        </div>
+                        <div class="gallery-grid1">
+                            <div class="team-grid">
+                                <div class="port-head">
+                                    <h3>Prefab</h3>
+                                </div>
+                                <img src="<?php echo $list[$i]['thumb'];?>" alt=""> 
+                                <div class="zhezhao"></div> 
+                            </div>
+                        </div> -->
+    				</div>
+                    <?php
+                        }
+                    ?>
+<!--                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 gallery-grid">
+                        <div class="gallery-grid1">
+                            <div class="team-grid">
+                                <div class="port-head">
+                                    <h3>Prefab</h3>
+                                </div>
+                                <img src="../static/img/g4.jpg" alt=""> 
+                                <div class="zhezhao"></div> 
+                            </div>
+                        </div>
+                        <div class="gallery-grid1">
+                            <div class="team-grid">
+                                <div class="port-head">
+                                    <h3>Prefab</h3>
+                                </div>
+                                <img src="../static/img/g5.jpg" alt=""> 
+                                <div class="zhezhao"></div> 
+                            </div>
+                        </div>
+                        <div class="gallery-grid1">
+                            <div class="team-grid">
+                                <div class="port-head">
+                                    <h3>Prefab</h3>
+                                </div>
+                                <img src="../static/img/g6.jpg" alt=""> 
+                                <div class="zhezhao"></div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 gallery-grid">
+                        <div class="gallery-grid1">
+                            <div class="team-grid">
+                                <div class="port-head">
+                                    <h3>Prefab</h3>
+                                </div>
+                                <img src="../static/img/g7.jpg" alt=""> 
+                                <div class="zhezhao"></div> 
+                            </div>
+                        </div>
+                        <div class="gallery-grid1">
+                            <div class="team-grid">
+                                <div class="port-head">
+                                    <h3>Prefab</h3>
+                                </div>
+                                <img src="../static/img/g8.jpg" alt=""> 
+                                <div class="zhezhao"></div> 
+                            </div>
+                        </div>
+                        <div class="gallery-grid1">
+                            <div class="team-grid">
+                                <div class="port-head">
+                                    <h3>Prefab</h3>
+                                </div>
+                                <img src="../static/img/g9.jpg" alt=""> 
+                                <div class="zhezhao"></div> 
+                            </div>
+                        </div>
+                    </div> -->
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    
+<!-- //portfolio -->
+    <script>
+    /*返回顶部*/
+    $(document).ready(function(){
+        $('.top-button').hide();
+        $(function(){
+            $(window).scroll(function(){
+                if($(window).scrollTop()>400){
+                    $('.top-button').fadeIn(1500);
+                }else{
+                    $('.top-button').fadeOut(1500);
+                }
+            })
+            $('.top-button').click(function(){
+                $('body,html').animate({scrollTop:0},1000);
+                return false;
+            })
+        })
+    })
+    /*图片放大*/
+    $(function(){
+        let lis=$('.team-grid');
+        let mask=$('.mask');
+        let close=$('.close');
+        let mImg=$('img',mask);
+        let left=$('.btnL')
+        let right=$('.btnR')
+        let i;
+        lis.on('click',function(){
+          i=$(this).index();
+          let src=$(this).find('img',mask).attr('src');
+          mImg.attr('src',src);
+          mask.addClass('active');
+        })
+        /*事件委派*/
+        // $('div.gallery').on('click',function(e){
+        //     let element=e.target;
+        //     i=$(element).index();
+        //     if(element.firstChild.nodeName=='IMG'){
+        //         mImg.attr('src',$(element).attr('src'));
+        //         mask.addClass('active');
+        //     }
+        // })
+        close.click(function(){
+            mask.removeClass('active');
+        })
+        left.on('click',function(){
+            if(i>lis.length-1){
+                i=0;
+            }
+            let src1=$('img',lis[++i]).attr('src');
+            mImg.attr('src',src1);
+        })
+        right.on('click',function(){
+            if(i<0){
+                i=lis.length-1;
+            }
+            let src1=$('img',lis[--i]).attr('src');
+            mImg.attr('src',src1);
+        })
+        
+        mask.on('click',function(e){
+            let left1=e.clientX;
+            if(left1<=innerWidth/2){
+                left.trigger('click')
+            }
+        })
+        mask.on('click',function(e){
+            let right1=e.clientX;
+            if(right1>=innerWidth/2){
+                right.trigger('click')
+            }
+        })
+       
+    })   
+    </script>

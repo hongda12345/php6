@@ -1,0 +1,115 @@
+<link rel="stylesheet" href="../static/css/typo.css">
+<!-- typograhy -->
+    <section>
+    	<div class="typo">
+    		<div class="container">
+    			<div class="heading">
+    				<h2 class="head">Process</h2>
+    			</div>
+                <div class="headings">
+                    <h3 class="hdg">Characteristics</h3>
+                    <div class="example">
+                        <table class="table">
+                            <tbody>
+                                <tr class="well">
+                                    <td><h5>The essence of the process is the execution of the program in the multiprogramming system, which is dynamically generated and dynamically dies.</h5></td>
+                                    <td class="typr-info">Dynamic</td>
+                                </tr>
+                                <tr class="well">
+                                    <td><h5>Any process can be executed concurrently with other processes.</h5></td>
+                                    <td class="typr-info">Concurrency</td>
+                                </tr>
+                                <tr class="well">
+                                    <td><h5>A process is a basic unit that can operate independently and is also an independent unit of system allocation resources and scheduling.</h5></td>
+                                    <td class="typr-info">Independence</td>
+                                </tr>
+                                <tr class="well">
+                                    <td><h5>Due to the interprocess constraints, the process has the intermittent nature of execution, that is, the process moves forward at its own independent and unpredictable speed
+Structural features: process consists of three parts: program, data, and process control block.</h5></td>
+                                    <td class="typr-info">Asynchrony</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="progress">
+                    <h3>Progress Bars</h3>
+                    <div class="tab-content">
+                        <div class="tab-pane">
+                            <div class="progress1">
+                                <div class="progress-bar progress-bar-primary" style="width: 20%"></div>
+                            </div>
+                            <p>Info with <code>progress-bar-info</code> class.</p>
+                            <div class="progress1">
+                                <div class="progress-bar progress-bar-primary" style="width: 60%;background: #5bc0de;"></div>
+                            </div>
+                            <p>Success with <code>progress-bar-info</code> class.</p>
+                            <div class="progress1">
+                                <div class="progress-bar progress-bar-primary" style="width: 30%;background: #5cb85c;"></div>
+                            </div>
+                            <p>Warning with <code>progress-bar-info</code> class.</p>
+                            <div class="progress1">
+                                <div class="progress-bar progress-bar-primary" style="width: 70%;background: #f0ad4e;"></div>
+                            </div>
+                            <p>Danger with <code>progress-bar-info</code> class.</p>
+                            <div class="progress1">
+                                <div class="progress-bar progress-bar-primary" style="width: 50%;background: #d9534f;"></div>
+                            </div>
+                            <p>Inverse with <code>progress-bar-info</code> class.</p>
+                            <div class="progress1">
+                                <div class="progress-bar progress-bar-primary" style="width: 40%;background: #337ab7;;"></div>
+                            </div>
+                            <p>Inverse with <code>progress-bar-info</code> class.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="alerts">
+                    <h3>Alerts</h3>
+                    <div class="alert alert-success">
+                        <strong>Well done!</strong> You successfully read this important alert message.
+                    </div>
+                    <div class="alert alert-info">
+                        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+                    </div>
+                    <div class="alert alert-warning">
+                       <strong>Warning!</strong> Best check yo self, you're not looking too good.
+                    </div>
+                    <div class="alert alert-danger">
+                       <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                    </div>
+                </div>
+                <div class="wells">
+                    <h3>Wells</h3>
+                    <div class="well">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                    </div>
+                    <div class="well">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here
+                    </div>
+                    <div class="well">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting Automated. Lorem Ipsum has been the Automated's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                    </div>
+                </div>
+    		</div>
+    	</div>
+    </section>
+<!-- //typograhy -->
+<script>
+    $(document).ready(function(){
+        $('.top-button').hide();
+        $(function(){
+            $(window).scroll(function(){
+                if($(window).scrollTop()>400){
+                    $('.top-button').fadeIn(1500);
+                }else{
+                    $('.top-button').fadeOut(1500);
+                }
+            })
+            $('.top-button').click(function(){
+                $('body,html').animate({scrollTop:0},1000);
+                return false;
+            })
+        })
+    })
+    </script>

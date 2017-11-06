@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="../static/css/contact.css">
+<!-- mail -->
+    <section>
+    	<div class="mail">
+    		<div class="container">
+    			<div class="heading">
+    				<h2 class="head">Contact</h2>
+    			</div>
+    			<div class="mail-grids">
+    				<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12  mail-grid-left">
+    					<form action="#" method="post">
+							<h4>Your Name*</h4>
+							<input type="text" name="Name" placeholder="Name..." required="">
+							<h4>Your Email*</h4>
+							<input type="email" name="Email" placeholder="Email..." required="">
+							<h4>Your Phone Number*</h4>
+							<input type="text" name="Phone" placeholder="Phone..." required="">
+							<h4>Your Message*</h4>
+							<textarea placeholder="Message..." name="Message"></textarea>
+							<input type="submit" id="submit" value="Send message">
+						</form>
+    				</div>
+    				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 mail-grid-right">
+    					<div class="map">
+    						<iframe src="" frameborder="0"></iframe>
+    					</div>
+    					<div class="address">
+    						<h3>Address</h3>
+    						<ul>
+    							<li><span class="iconfont icon-home"></span>7th Street, Melbourne City, Australia.</li>
+    							<li><span class="iconfont icon-xinfeng"><a href="mailto:info@example.com">info@example.com</a></span></li>
+    							<li><span class="iconfont icon-iconfontcolor39"></span>(4584) 5689 0254 128</li>
+    						</ul>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+<!-- //mail -->
+<script>
+    $(document).ready(function(){
+        $('.top-button').hide();
+        $(function(){
+            $(window).scroll(function(){
+                if($(window).scrollTop()>400){
+                    $('.top-button').fadeIn(1500);
+                }else{
+                    $('.top-button').fadeOut(1500);
+                }
+            })
+            $('.top-button').click(function(){
+                $('body,html').animate({scrollTop:0},1000);
+                return false;
+            })
+        })
+    })
+</script>

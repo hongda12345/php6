@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addArticle</title>
+    <link rel="stylesheet" href="../static/css/addArticle.scss">
+</head>
+<body>
+    <div class="panel">
+    <form action="addArticle.php" method="post" enctype="multipart/form-data">
+        <div class="formgroup">
+            <label for="">父级栏目</label>
+            <select name="cid" id="">
+                <option value="0">一级栏目</option>
+                <?php echo $option;?>
+            </select>
+        </div>
+        <div class="formgroup">
+            <label for="">文章标题</label>
+            <input type="text" name="title">
+        </div>
+        <div class="formgroup">
+            <label for="">文章描述</label>
+            <textarea name="description" id="" cols="" rows="3"></textarea>
+        </div>
+        <div class="formgroup">
+            <label for="">文章内容</label>
+            <textarea name="content" id="" cols="" rows="3"></textarea>
+        </div>
+        <div class="formgroup">
+            <label for="">文章图片</label>
+            <input type="file" name="img" value="" multiple>
+        </div>
+        <div class="formgroup">
+            <input type='submit' name="sub" value="submit">
+        </div>
+    </form>
+    </div>
+</body>
+</html>

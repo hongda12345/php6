@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>index</title>
+    <link rel="stylesheet" href="../static/css/response.css">
+    <link rel="stylesheet" href="../static/iconfont/iconfont.css">
+    <script src="../static/js/animate.js"></script>
+    <script src="../static/js/rem.js"></script>
+    <script src="../static/js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<!-- navigation -->
+    <section>
+    	<div class="top-nav">
+    		<div class="container">
+    			<div class="row">
+    				<div class="navbar-header">
+    					<h1><a href="index.php">Villa</a></h1>
+    				</div>
+    				<div class="navbar-left">
+    					<ul class="nav">
+                            <li><a href="index.php">Home</a></li>
+                            <?php
+                                for($i=0;$i<count($nav);$i++){
+                            ?>
+                            <li>
+                                <a href="list.php?cid=<?php echo $nav[$i]['cid'];?>">
+                                    <?php echo $nav[$i]['cname']?>
+                                </a>
+                            </li>
+                            <?php
+                               }
+                            ?>
+    						<!-- <li style="background: #2ebadf;"><a href="index.html">Home</a></li>
+    						<li><a href="about.html">About</a></li>
+    						<li><a href="gallery.html">Gallery</a></li>
+    						<li><a href="typo.html">Process</a></li>
+    						<li><a href="contact.html">Contact</a></li> -->
+    					</ul>
+    				</div>
+    				<span class="dropdown-menu">Menu</span>
+    				<div class="navbar-right">
+    					<ul class="socials">
+                            <?php
+                                for($i=0;$i<count($nav);$i++){
+                            ?>
+    						<li><a href="" class="social-button iconfont <?php echo $nav[$i]['iconName']?>"></a></li>
+                            <?php
+                               }
+                            ?>
+                            <!-- <li><a href="" class="social-button iconfont icon-google-plus"></a></li>
+                            <li><a href="" class="social-button iconfont icon-facebook"></a></li>
+                            <li><a href="" class="social-button iconfont icon-twitter"></a></li> -->
+    					</ul>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>	
+<!-- //navigation -->

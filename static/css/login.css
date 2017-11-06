@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/*
+* @Author: 瀹忚揪
+* @Date:   2017-10-31 11:50:53
+* @Last Modified by:   瀹忚揪
+* @Last Modified time: 2017-11-01 22:04:04
+*/
+* {
+  margin: 0;
+  padding: 0;
+  lists-tyle: none;
+  box-sizing: border-box; }
+
+body {
+  background: url("../img/login.jpg") center/cover; }
+
+.content {
+  width: 400px;
+  height: 300px;
+  margin: 150px auto;
+  padding: 30px 0;
+  animation: donghua 0.5s;
+  background: #1BA5ED;
+  border-radius: 5px; }
+
+form {
+  text-align: center; }
+
+h3 {
+  color: #fff;
+  padding: 20px 0;
+  font-size: 30px; }
+
+.formgroup {
+  padding: 10px 0; }
+
+.formgroup input {
+  padding: 2px 3px; }
+
+.button {
+  border: none;
+  padding: 5px 5px;
+  background: #fff;
+  border-radius: 2px;
+  cursor: pointer; }
+
+@keyframes donghua {
+  0% {
+    transform: scale(0, 0) rotateZ(360deg); }
+  100% {
+    transform: scale(1, 1) rotateZ(0deg); } }
+
+/*# sourceMappingURL=login.css.map */

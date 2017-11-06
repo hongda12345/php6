@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>updateArticle</title>
+	<link rel="stylesheet" href="../static/css/updateArticle.scss">
+</head>
+<body>
+	<div class="panel">
+    <form action="updateArticle.php" method="post" enctype="multipart/form-data">
+        <div class="formgroup">
+            <label for="">父级栏目</label>
+            <select name="cid" id="">
+                <option value="0">一级栏目</option>
+                <?php echo $option;?>
+            </select>
+        </div>
+        <div class="formgroup">
+            <label for="">文章标题</label>
+            <input type="text" name="title" value="<?php echo $title;?>">
+        </div>
+        <div class="formgroup">
+            <label for="">文章描述</label>
+            <textarea name="description" id="" cols="" rows="3"><?php echo $description;?></textarea>
+        </div>
+        <div class="formgroup">
+            <label for="">文章内容</label>
+            <textarea name="content"><?php echo $content;?></textarea>
+        </div>
+        <div class="formgroup">
+            <label for="">缩略图</label>
+            <input type="file" name="img" value="" multiple>
+        </div>
+        <div class="formgroup">
+            <input type="hidden" name="nid" value="<?php echo $nid;?>">
+        </div>
+        <div class="formgroup">
+            <input type='submit' name="sub" value="submit">
+        </div>
+    </form>
+    </div>
+</body>
+</html>

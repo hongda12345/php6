@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="../static/css/about.css">
+<!-- about -->
+  <!-- course -->
+     <section>
+  	    <div class="course">
+  	    	<div class="container">
+  	    		<div class="heading">
+					<h2 class="head">About Us</h2>
+				</div>
+				<div class="course-grids">
+					<div class="col-lg-6 col-md-6 course-left">
+						<div class="course-left-grids">
+              <?php
+              for($i=1;$i<4;$i++){
+              ?>
+							<div class="course-left-grid">
+								<h3><i class="iconfont <?php echo $list[$i]['content']?>"></i><?php echo $list[$i]['title'];?></h3>
+								<p><?php echo $list[$i]['description'];?></p>
+							</div>
+              <?php
+              }
+              ?>
+							<!-- <div class="course-left-grid">
+								<h3><i class="iconfont icon-pencil"></i>Simple credible</h3>
+								<p>We like to be simple with our customers, to put forward our views directly and to be happy and open to any comments.</p>
+							</div>
+							<div class="course-left-grid">
+								<h3><i class="iconfont icon-pencil"></i>Passion and enterprising</h3>
+								<p>We always maintain that every employee of the company has the spirit of dedication and undefeatable.</p>
+							</div> -->
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 course-right">
+            <?php
+              for($i=0;$i<1;$i++){
+            ?>
+						<img src="<?php echo $list[$i]['thumb'];?>" alt=" ">
+            <?php
+              }
+            ?>
+					</div>
+				</div>
+  	    	</div>
+  	    </div>
+     </section>
+  <!-- courses -->
+  <!-- stats -->
+      <section>
+  	  <div class="stats">
+  		<!-- <div class="container"> -->
+  			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 stats-left counter-grid">
+          <p class="timer count-title" id="count-number" data-to="888" data-speed="1500"></p>
+			    <h3>Technique</h3>
+  			</div>
+  			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 stats-left counter-grid1">
+          <p class="timer count-title" id="count-number" data-to="777" data-speed="1500"></p>
+			    <h3>Produced</h3>
+  			</div>
+  			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 stats-left counter-grid2">
+          <p class="timer count-title" id="count-number" data-to="666" data-speed="1500"></p>
+			    <h3>Sales</h3>
+  			</div>
+  			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 stats-left counter-grid3">
+          <p class="timer count-title" id="count-number" data-to="555" data-speed="1500"></p>
+			    <h3>Markets</h3>
+  			</div>
+  		</div>
+  	  <!-- </div> -->
+      </section>
+  <!-- //stats -->
+  <!-- stats-bottom-banner -->
+      <section>
+      	<div class="stats-bottom-banner">
+      		<div class="container">
+      			<h3>the whole purpose of <span>education</span> is to turn mirrors into windows</h3>
+			    <p>Nunc in dolor hendrerit, pellentesque mi ac, accumsan nunc. Vestibulum sapien lacus, 
+				auctor sed ullamcorper id, aliquam molestie dui. Proin faucibus 
+				ullamcorper erat id interdum.</p>
+      		</div>
+      	</div>
+      </section>
+  <!-- //stats-bottom-banner -->
+  <!-- stats-bottom -->
+      <section>
+      	<div class="team">
+      		<div class="container">
+      			<div class="heading">
+      				<h3 class="head">Our Skills</h3>
+      			</div>
+      			<div class="team-grids">
+      				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 team-gird-left">
+      					<?php
+                  for($i=0;$i<1;$i++){
+                ?>
+                <img src="<?php echo $list[$i]['thumb'];?>" alt=" ">
+                <?php
+                }
+                ?>
+      				</div>
+      				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 team-grid-right">
+      					<div class="group">
+                  <p class=bar-label>Building Design</p>
+      						<div class="bar-group thin " label="Building Design" value="65" jindu='65'>
+      							<div class="bar-group-pos">
+      								<!-- <p>65%</p> -->
+      							</div>
+      						</div>
+                  <p class=bar-label>Office Design</p>
+      						<div class="bar-group thin " label="Building Design" value="130" jindu='35'>
+      							<div class="bar-group-pos">
+      								<!-- <p>35%</p> -->
+      							</div>
+      						</div>
+                  <p class=bar-label>APARTMENT</p>
+      						<div class="bar-group thin " label="Building Design" value="160" jindu='45'>
+      							<div class="bar-group-pos">
+      								<!-- <p>45%</p> -->
+      							</div>
+      						</div>
+                  <p class=bar-label>ROOM DESIGN</p>
+      						<div class="bar-group thin " label="Building Design" value="340" jindu='100'>
+      							<div class="bar-group-pos">
+      								<!-- <p>100%</p> -->
+      							</div>
+      						</div>
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      </section>
+  <!-- //stats-bottom -->
+<!-- //about -->
